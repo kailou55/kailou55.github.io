@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link href="css/mobile-base.css" type="text/css" rel="stylesheet">
+<link href="css/mobile-style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/mobile-base.js"></script>
+
+<link href="plug/swiper/swiper.min.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="plug/swiper/swiper.min.js"></script>
+<title>design</title>
+</head>
+<body>
+
+<!--*头部-开始*************************************-->
+  <header class="g-hd ub">
+     <a href="javascript:void(0);" class="close_adv_btn"></a>
+     <a href="#" class="hd-logo bs-cov"></a>
+     <div class="hd-cen ub-f1">
+       <p class="hd-tit1">下载投融在线客户端</p>
+       <h2 class="hd-tit2">服务股权融资全过程</h2>
+     </div>
+     <a href="#" class="u-btn1">立即体验</a>
+  </header>
+<!--*头部-结束**************************************-->
+
+<!--*内容-开始**************************************-->
+  <article class="g-bd">
+    <!--<div class="m-bner dis-bner"><img src="images/adv/dis_bner01.jpg"></div>-->
+    <div class="dis_dialog">
+      <img src="images/adv/dis_dialog_bg.jpg" class="dis_dialog_bg">
+      <dl class="dis_dialog_ifo">
+        <dt class="photo"><img src="images/thumb/dis_photo01.jpg"></dt>
+        <dd class="info">
+          <h3 class="tit">公司发展历程中所经历的历…</h3>
+          <p class="txt">02:00</p>
+        </dd>
+      </dl>
+      
+      <ul class="dis_dialist" id="sendData_list">
+        <li>你们搞演出的多少钱你们搞演出的多少钱你们搞演出的多少钱你们搞演出的多少钱一场啊？</li>
+        <li>行业机密不能和你讲！</li>
+        <li>这个问题还是不懂，能否再讲一次</li>        
+      </ul>
+      
+      <span class="dis_num">0</span>
+      
+      <div class="dis_sendPut ub">
+        <div class="ub-f1 dis_ainput">
+          <textarea type="text" value="" class="ub-bsb" id="send-content"></textarea>
+          <span class="login_tips"><a href="#" class="red">登录</a>后才可以聊天</span>
+        </div>
+        <button class="dis_asubmit" id="send_btn">发送</button>
+      </div>
+      
+    </div>
+    <dl class="dis-item ub ub-pc">
+      <dt class="photo"><img src="images/thumb/dis_photo01.jpg"></dt>
+      <dd class="info ub-f1">
+        <h3 class="tit">公司发展历程中所经历的历…</h3>
+        <div class="txt">
+          <span class="cel1">致通振业税务师事...</span>
+          <span class="cel2">李记有</span>
+        </div>
+      </dd>
+    </dl>
+      
+  </article>
+<!--*内容-结束**************************************--> 
+
+<!--*底部-开始**************************************-->  
+  <footer class="g-ft">
+     <div class="ft-logo"><img src="images/icons/ft_logo.png"></div>
+     <dl class="ft-ewm">
+       <dt><img src="images/icons/ewm.png"></dt>
+       <dd>
+         <span class="tel"><img src="images/icons/tel_txt.png"></span>
+         <span class="timer">工作日  10:00-19:00</span>
+         <a href="#" class="u-btn1 link">在线客服</a>
+       </dd>
+     </dl>
+     <p class="ft-cp">GUOKR @ 2015 LOVINGLY MADE IN BEIJING 京ICP备<br>09043258号-9</p>
+     <p class="ft-adrs">投融在线（北京）股权投资服务有限公司<br>地址：北京市海淀区东北旺镇马连洼亿城国际中心4层410室</p>
+  </footer>
+<!--*底部-结束**************************************-->
+<script type="text/javascript">
+$(function(){
+  /*评分*/
+	var scores = $.rScore({
+			self : '.m-coms-star',
+			star : '.s',
+			tf   : true					
+	});	
+	
+	/*展现更多*/
+  $('.btn').on('click',function(){
+		var $btn = $(this);		
+	  if($btn.parents('.m-coms-cn').find('.info').hasClass('down')){
+			$btn.parents('.m-coms-cn').find('.info').removeClass('down').addClass('up');
+			$btn.removeClass('down').addClass('up');
+		}else{
+		  $btn.parents('.m-coms-cn').find('.info').removeClass('up').addClass('down');
+			$btn.removeClass('up').addClass('down');	
+		}	
+	});	
+	
+	$('.select-num-all').click(function(){
+	  $(this).prev().height('auto');	
+	});
+	
+	$('.dis_ainput textarea').click(function(){
+		
+	});
+	
+	发送信息
+	$.pSend({
+		 showCont : '#sendData_list',
+		 input : '#send-content',
+		 sendBtn : '#send_btn',
+		 beforeSend : function(){
+
+
+		 },
+		 callBack : function(){
+
+
+		 }
+
+  });
+				
+})
+</script>
+</body>
+</html>
